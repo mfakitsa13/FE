@@ -31,22 +31,12 @@
 
 ## Σελίδες
 
-### Αυθεντικοποίηση χρήστη και επιστροφή token : /login 
-
-```http
-/dashboard
-```
-###Σχολές οδηγών
-```http
-/driving-schools
-```
-/students: Μαθητές
-
-/driving-schools/edit/+id: Επεξεργασία στοιχείων συγκεκριμένης σχολής οδηγών
-
-/driving-schools/create: Δημιουργία σχολής οδηγών
-
-/students/edit/+id: Επεξεργασία στοιχείων συγκεκριμένου μαθητή
-
-/students/create: Δημιουργία νέου μαθητή
+#### Αυθεντικοποίηση χρήστη και επιστροφή token: /login 
+#### Αρχική  σελίδα: /dashboard
+#### Σχολές οδηγών: /driving-schools
+#### Μαθητές: /students
+#### Επεξεργασία στοιχείων συγκεκριμένης σχολής οδηγών: /driving-schools/edit/+id
+#### Δημιουργία σχολής οδηγών: /driving-schools/create
+#### Επεξεργασία στοιχείων συγκεκριμένου μαθητή: /students/edit/+id
+#### Δημιουργία νέου μαθητή: /students/create
 
