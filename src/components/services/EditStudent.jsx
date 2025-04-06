@@ -104,7 +104,7 @@ export default function EditDrivingSchool() {
         setAgeError(age < 18 || (age === 18 && month < 0));
     };
 
-    // 🔹 Υποβολή φόρμας
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
