@@ -23,7 +23,7 @@ const DrivingSchoolsPage = () => {
   const DeleteDrivingSchool = (id) => {
        const token = localStorage.getItem("token");
        if(window.confirm("Είσαι σίγουρος/η ότι θέλεις να διαγράψεις αυτή τη σχολή οδηγών;")){
-         fetch("http://192.168.1.102:8080/api/driving-schools/"+id,{
+         fetch("http://localhost:8080/api/driving-schools/"+id,{
              method:'DELETE',
              headers: {
               "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const DrivingSchoolsPage = () => {
   
     let alertShown = false; 
   
-    fetch('http://192.168.1.102:8080/api/driving-schools', {
+    fetch('http://localhost:8080/api/driving-schools', {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
