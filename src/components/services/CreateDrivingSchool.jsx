@@ -17,7 +17,7 @@ export default function CreateDrivingSchool() {
     // Φόρτωση δεδομένων κατά την είσοδο στη σελίδα
     useEffect(() => {
         const token = localStorage.getItem("token");
-        fetch("http://192.168.1.102:8080/api/driving-schools", {
+        fetch("http://localhost:8080/api/driving-schools", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export default function CreateDrivingSchool() {
         const token = localStorage.getItem("token");
 
         try {
-            const response = await fetch("http://192.168.1.102:8080/api/driving-schools", {
+            const response = await fetch("http://localhost:8080/api/driving-schools", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
