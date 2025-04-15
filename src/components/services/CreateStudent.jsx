@@ -23,7 +23,7 @@ export default function CreateStudent() {
         const token = localStorage.getItem("token");
 
         // Φορτώνω τις σχολές
-        fetch('http://192.168.1.102:8080/api/driving-schools', {
+        fetch('http://localhost:8080/api/driving-schools', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function CreateStudent() {
         });
 
         // Φορτώνω τους μαθητές
-        fetch('http://192.168.1.102:8080/api/students', {
+        fetch('http://localhost:8080/api/students', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export default function CreateStudent() {
         const token = localStorage.getItem("token");
 
         try {
-            const response = await fetch("http://192.168.1.102:8080/api/students", {
+            const response = await fetch("http://localhost:8080/api/students", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
