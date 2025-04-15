@@ -22,7 +22,7 @@ export default function EditDrivingSchool() {
     useEffect(() => {
         const token = localStorage.getItem("token");
 
-        fetch('http://192.168.1.102:8080/api/driving-schools', {
+        fetch('http://localhost:8080/api/driving-schools', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export default function EditDrivingSchool() {
         .then(data => setSchools(data))
         .catch(err => console.error("Error fetching schools:", err.message));
 
-        fetch('http://192.168.1.102:8080/api/students', {
+        fetch('http://localhost:8080/api/students', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export default function EditDrivingSchool() {
     useEffect(() => {
         const token = localStorage.getItem("token");
 
-        fetch(`http://192.168.1.102:8080/api/students/${studentid}`, {
+        fetch(`http://localhost:8080/api/students/${studentid}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -121,7 +121,7 @@ export default function EditDrivingSchool() {
         const token = localStorage.getItem("token");
 
         try {
-            const response = await fetch(`http://192.168.1.102:8080/api/students/${studentid}`, {
+            const response = await fetch(`http://localhost:8080/api/students/${studentid}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
