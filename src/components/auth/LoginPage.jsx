@@ -22,7 +22,7 @@ const LoginPage = () => {
   
     try {
       // Κάνω αίτημα στον server για login
-      const response = await axios.post('http://192.168.1.102:8080/api/auth/login', loginData);
+      const response = await axios.post('http://localhost:8080/api/auth/login', loginData);
       
       console.log("API Response:", response.data); // Ελέγχω την απάντηση του API
       localStorage.setItem('token', response.data.accessToken);
