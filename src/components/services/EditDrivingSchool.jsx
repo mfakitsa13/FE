@@ -25,7 +25,7 @@ export default function EditDrivingSchool() {
     useEffect(() => {
         const token = localStorage.getItem("token");
         console.log("Token:", token); 
-        fetch('http://192.168.1.102:8080/api/driving-schools/' + drivingschoolid, {
+        fetch('http://localhost:8080/api/driving-schools/' + drivingschoolid, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export default function EditDrivingSchool() {
             .catch((err) => console.error("Error fetching data:", err.message));
             
             // Φέρνουμε όλες τις σχολές για να ελέγξουμε για διπλότυπα
-        fetch("http://192.168.1.102:8080/api/driving-schools", {
+        fetch("http://localhost:8080/api/driving-schools", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -107,7 +107,7 @@ export default function EditDrivingSchool() {
         const token = localStorage.getItem("token"); // Παίρνω το token
 
         try {
-            const response = await fetch("http://192.168.1.102:8080/api/driving-schools/" + drivingschoolid, {
+            const response = await fetch("http://localhost:8080/api/driving-schools/" + drivingschoolid, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
