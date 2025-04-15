@@ -24,7 +24,7 @@ const StudentsPage = () => {
   const DeleteStudent = (id) => {
     const token = localStorage.getItem("token");
     if (window.confirm("Είσαι σίγουρος ότι θέλεις να διαγράψεις αυτόν τον μαθητή;")) {
-      fetch("http://192.168.1.102:8080/api/students/" + id, {
+      fetch("http://localhost:8080/api/students/" + id, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const StudentsPage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     console.log("Token:", token); 
-    fetch('http://192.168.1.102:8080/api/students', {
+    fetch('http://localhost:8080/api/students', {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
